@@ -1,10 +1,10 @@
 @use '../../../utils/mixin.scss' as mixin;
 @use '../../../utils/variables.scss' as var;
 
-.button {
+.default {
   @include mixin.fontPoppins(400, white);
 
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: var.$primary-color;
   border: none;
   border-radius: 5px;
@@ -12,16 +12,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   transition: all 0.2s ease-in-out;
-
-  &__arrow {
-    height: 1rem;
-    width: 1rem;
-    margin-left: 0.5rem;
-  }
 
   &:hover {
     cursor: pointer;
     background-color: var.$primary-color-hover;
   }
+}
+
+.ghost {
+  @include mixin.fontPoppins(400, black);
+
+  padding: 10px 10px;
+
+  border: 1px solid var.$ghost-color-hover;
+  border-radius: 5px;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.arrow {
+  height: 1rem;
+  width: 1rem;
 }

@@ -1,11 +1,27 @@
 import './Button.scss';
 import { ArrowRight } from 'lucide-react';
 
-export function Button({ text }: { text: string }) {
+export function Button({
+  text,
+  style = 'default',
+}: {
+  text: string;
+  style?: 'default' | 'ghost';
+}) {
+  type Styles = {
+    default: string;
+    ghost: string;
+  };
+
+  const styles: Styles = {
+    default: 'default',
+    ghost: 'ghost',
+  };
+
   return (
-    <button className="button">
+    <button className={styles[style]}>
       {text}
-      <ArrowRight className="button__arrow" />
+      <ArrowRight className="arrow" />
     </button>
   );
 }

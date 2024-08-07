@@ -1,0 +1,29 @@
+@use '../../utils/mixin.scss' as mixin;
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 0;
+  background-color: white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    @include mixin.fontPoppins();
+  }
+}
+
+@media (max-width: 450px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+}

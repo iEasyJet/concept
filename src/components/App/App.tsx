@@ -1,13 +1,11 @@
-import { Logo } from '../Logo/Logo';
-import { Header } from '../Header/Header';
 import './App.scss';
+import { Welcome } from '../Welcome/Welcome';
 
 function App() {
   return (
-    <>
-      <Logo />
-      <Header />
-    </>
+    <div className="app">
+      <Welcome />
+    </div>
   );
 }
 

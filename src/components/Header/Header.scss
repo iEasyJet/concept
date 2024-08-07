@@ -1,47 +1,18 @@
-@use '../../utils/mixin.scss' as mixin;
 @use '../../utils/variables.scss' as var;
 
 .header {
-  max-width: 48rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  z-index: 50;
+  background-color: white;
 
-  &__title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-
-    @include mixin.fontPoppins();
-
-    &_underline {
-      text-decoration: underline;
-    }
-  }
-
-  &__subtitle {
-    @include mixin.fontPoppins(500);
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .header__title {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .header__subtitle {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width: 640px) {
-  .header__title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .header__subtitle {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  &_scroll_on {
+    border-bottom-width: 1px;
+    box-shadow: var.$primary-color 0px 15px 10px -10px;
   }
 }

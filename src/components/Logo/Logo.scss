@@ -1,9 +1,11 @@
 @use '../../utils/mixin.scss' as mixin;
 
 .logo {
-  display: none;
+  display: flex;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 5px;
+
+  transition: all 0.2s ease-in-out;
 
   &__img {
     width: 40px;
@@ -13,10 +15,17 @@
   &__title {
     @include mixin.fontPoppins(600);
   }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
+/*
 @media (min-width: 768px) {
   .logo {
     display: flex;
   }
 }
+*/
