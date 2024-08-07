@@ -1,0 +1,6 @@
+@mixin fontPoppins($weight: 400, $color: black) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+  color: $color;
+}

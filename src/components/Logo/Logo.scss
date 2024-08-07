@@ -1,0 +1,22 @@
+@use '../../utils/mixin.scss' as mixin;
+
+.logo {
+  display: none;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {
+    @include mixin.fontPoppins(600);
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    display: flex;
+  }
+}

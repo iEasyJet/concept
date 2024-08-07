@@ -1,0 +1,27 @@
+@use '../../../utils/mixin.scss' as mixin;
+@use '../../../utils/variables.scss' as var;
+
+.button {
+  @include mixin.fontPoppins(400, white);
+
+  padding: 5px 10px;
+  background-color: var.$primary-color;
+  border: none;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &__arrow {
+    height: 1rem;
+    width: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var.$primary-color-hover;
+  }
+}
